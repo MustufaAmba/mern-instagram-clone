@@ -1,0 +1,21 @@
+.hiddenPostStyles{
+    background-color: #fff;
+    border:1px solid lightgray
+}
+.followBtnStyles{
+    background-color: #0095f7 !important;
+    font-size: 12px !important;
+    font-weight: 600;
+    padding:5px 15px !important;
+}
+.followModalStyles{
+height:20vh;
+overflow: hidden auto;
+}
+@media screen and (max-width:540px)
+{
+    .profileImageStyles{
+        height:100px !important;
+        width:100px !important;
+    }
+}

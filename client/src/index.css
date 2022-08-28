@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.fs-cursor{
+  cursor: pointer;
+}
+.img-upload-div {
+  padding: 250px 0px;
+}
+.container-lg{
+  max-width:1000px !important;
+  }
+  .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+   }
+   
+   .carousel-control-next-icon {
+     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+   }
+   .carousel-indicators [data-bs-target]{
+     background-color: #000 !important;
+   }
+@media screen and (max-width: 1600px) {
+  .img-upload-div {
+    padding: 220px 0px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .img-upload-div {
+    padding: 200px 0px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .img-upload-div {
+    padding: 170px 0px;
+  }
+}
+@media screen and (max-width: 976px) {
+  .img-upload-div {
+    padding: 140px 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .img-upload-div {
+    padding: 120px 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .img-upload-div {
+    padding: 80px 0px;
+  }
+
+}

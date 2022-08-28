@@ -1,0 +1,19 @@
+em-emoji-picker{
+    height:300px !important;
+    width:250px !important;
+    overflow: auto;
+}
+.smileBtnStyles
+{
+    border:none !important;
+    outline: none !important;
+    height: fit-content !important;
+    width: fit-content !important;
+    padding: 0px !important;
+    background-color: #fff !important;
+}
+.smileBtnStyles:focus
+{
+    border:none !important;
+    outline: none !important;
+}

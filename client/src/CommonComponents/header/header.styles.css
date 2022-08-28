@@ -1,0 +1,35 @@
+.requestBtnStyles {
+  height: fit-content !important;
+  width: fit-content !important;
+  padding: 0px !important;
+  background-color: #fff !important;
+  border: none !important;
+  outline: none !important;
+}
+.requestBtnStyles:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.requestBadge {
+  position: absolute;
+  right: 10px;
+  top: -5px !important;
+}
+.searchStyles {
+  height: 20vh;
+  overflow: auto;
+}
+.searchStyles::-webkit-scrollbar {
+  display: none;
+}
+.profileLinkStyles {
+  border-right: 1px solid lightgray;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+.profileLinkStyles:hover {
+  background-color: #fafafa;
+  color: #000;
+}

@@ -1,0 +1,102 @@
+.chatStyles {
+  background-color: #fafafa;
+}
+.chatMessages {
+  width: 400px;
+  height: 85vh;
+  overflow: hidden auto !important;
+  border: 1px solid lightgray;
+}
+.chatBodyStyles {
+  width: 600px;
+  height: 85vh;
+  border: 1px solid lightgray;
+  position: relative;
+}
+.userChatStyles:hover {
+  background-color: #fafafa;
+  cursor: pointer;
+}
+.chatArea {
+  height: 65vh;
+  overflow: hidden auto;
+}
+.chatInputStyles {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+.chatInputDivStyles {
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 97%;
+  z-index:1000;
+}
+.chatInputStyles:focus {
+  border: none;
+  outline: none;
+}
+.messageStyles {
+  background-color: #efefef;
+  border-radius: 20px;
+  width: fit-content;
+}
+.senderMessageStyles {
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  width: fit-content;
+}
+.newMessageStyles {
+  border: none;
+  outline: none;
+}
+.newMessageStyles:focus {
+  border: none;
+  outline: none;
+}
+.checkboxContainer {
+  overflow: hidden auto;
+  height: 30vh;
+}
+
+.chatArea::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.chatArea::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.chatArea::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  width: 10px;
+  border-radius: 10px;
+  outline: 1px solid slategrey;
+}
+.removeBtnStyles{
+  border:none;
+  outline:none;
+  background-color: #fff;
+}
+.removeBtnStyles:focus{
+  border:none;
+  outline:none;
+  background-color: #fff;
+}
+@media screen and (max-width:576px)
+{
+  .chatArea {
+    height: 78vh;
+    overflow: hidden auto;
+  }
+    .chatMessages {
+        width: 100%;
+        height:94vh;
+      }
+     .chatBodyStyles {
+        width: 100%;
+        height:94vh;
+      }
+}

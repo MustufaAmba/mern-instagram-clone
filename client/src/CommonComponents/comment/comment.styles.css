@@ -1,0 +1,42 @@
+.modal-xl {
+  max-width: 1200px !important;
+}
+.commentSectionStyles {
+  height: 46vh;
+  overflow: hidden auto;
+  position: absolute;
+  top: 0;
+}
+.commentSectionStyles::-webkit-scrollbar {
+  display: none;
+}
+@media screen and (min-width: 576px) {
+  .responsiveStyles {
+    width: 50% !important;
+    height: 75% !important;
+    background-color: gray !important;
+  }
+  .responsiveStylesComments {
+    width: 50% !important;
+  }
+  .contentStyles {
+    max-height: 75vh;
+    object-fit: contain;
+  }
+}
+@media screen and (max-width: 576px) {
+  .responsiveStylesComments {
+    width: 100% !important;
+  }
+  .responsiveStyles {
+    width: 100% !important;
+    height: 100% !important;
+    background-color: #fff !important;
+  }
+  .modal-content {
+    min-height: 500px !important;
+  }
+  .postContainerStyles {
+    min-height: 500px !important;
+  }
+}

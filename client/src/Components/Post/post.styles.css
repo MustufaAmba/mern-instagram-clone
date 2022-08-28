@@ -1,0 +1,9 @@
+.captionStyles {
+  border: none !important;
+  outline: none;
+  resize: none;
+}
+.captionStyles:focus {
+  border: none;
+  outline: none;
+}

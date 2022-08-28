@@ -1,0 +1,27 @@
+.signInForm {
+  border: 1px solid lightgray;
+  background-color: #fff;
+}
+.line {
+  height: 2px;
+  width: 100%;
+  background-color: lightgray;
+}
+.signUpSection {
+  border: 1px solid lightgray;
+  background-color: #fff;
+}
+.policyText {
+  font-size: 12px;
+  color: gray;
+}
+.fs-small {
+  font-size: 13px;
+}
+.modal {
+  overflow: hidden !important;
+  background: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+  border-radius: 20px !important;
+}

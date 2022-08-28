@@ -1,0 +1,11 @@
+.settingLinksStyles{
+    padding:15px;
+    cursor:pointer;
+    text-decoration: none;
+    color: #000;
+}
+.settingLinksStyles:hover{
+    background-color: #fafafa;
+    color: #000;
+    border-left:2px solid lightgray;
+}

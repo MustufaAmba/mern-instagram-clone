@@ -1,0 +1,17 @@
+.inputStyles{
+    background-color: #fafafa;
+    width:100% !important;
+    border: 1px solid #dbdbdb;
+    padding:5px !important;
+    font-size: 12px;
+    border-radius: 3px;
+}
+.inputStyles:focus{
+     outline: none !important;
+    border:1px solid rgb(175, 175, 175) !important;
+}
+.inputStyles::placeholder{
+  
+    color: gray;
+    font-size: 12px;
+}
