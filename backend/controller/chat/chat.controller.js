@@ -1,0 +1,12 @@
+const express = require("express")
+const {validateParams, validateBody} = require("../../middleware/validateId")
+const Chat = require("../../domain/chat.domain")
+const message = require("./message/message.controller")
+const router = express.Router()
+router.use("/:chatId/message",message)
+router.post('/',Chat.createChat)
+router.get('/:userId',validateParams,Chat.fetchChats)
+router.get('/chat/:chatId',validateParams,Chat.fetchChatById)
+router.delete('/:chatId',[validateBody,validateParams],Chat.deleteChat)
+router.put("/:chatId/edit",validateParams,Chat.editChat)
+module.exports = router
