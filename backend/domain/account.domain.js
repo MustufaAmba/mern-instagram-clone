@@ -111,24 +111,28 @@ class AccountDomain {
         const user=  await User.findOne({userName})
          mobileNumber=user.mobileNumber
       } 
-      twilio.messages.create({
-          from:process.env.TWILIO_PHONE_NUMBER,
-          to:`+91${mobileNumber}`,
-          body:
-          `${otp} is your instagram code.
-          Don't share it.`
-      })
-      .then(async()=>{
-          const salt = await bcrypt.genSalt(10)
+      const salt = await bcrypt.genSalt(10)
           const hashedOtp = await bcrypt.hash(otp, salt)
        const result= await Otp.create({mobileNumber,otp:hashedOtp})
-          res.json({message:'otp send successfully'})
-      })
-      .catch(error=>{
-          if(error.status===400)
-          {
-              return res.status(400).json({message:"this number is not verified please enter a verified number"})
-          }})
+          res.json({message:'otp send successfully',otp})
+      // twilio.messages.create({
+      //     from:process.env.TWILIO_PHONE_NUMBER,
+      //     to:`+91${mobileNumber}`,
+      //     body:
+      //     `${otp} is your instagram code.
+      //     Don't share it.`
+      // })
+      // .then(async()=>{
+      //     const salt = await bcrypt.genSalt(10)
+      //     const hashedOtp = await bcrypt.hash(otp, salt)
+      //  const result= await Otp.create({mobileNumber,otp:hashedOtp})
+      //     res.json({message:'otp send successfully'})
+      // })
+      // .catch(error=>{
+      //     if(error.status===400)
+      //     {
+      //         return res.status(400).json({message:"this number is not verified please enter a verified number"})
+      //     }})
     } catch (error) {
       next(error);
     }
@@ -227,24 +231,28 @@ class AccountDomain {
         return res.status(404).json({ message: "no user found please enter valid username" });
       }
 const otp = generateOTP()
-            twilio.messages.create({
-          from:process.env.TWILIO_PHONE_NUMBER,
-          to:`+91${isAccountExists[0].mobileNumber}`,
-          body:
-          `${otp} is your instagram code.
-          Don't share it.`
-      })
-      .then(async()=>{
-        const salt = await bcrypt.genSalt(10);
+   const salt = await bcrypt.genSalt(10);
         const hashedOtp = await bcrypt.hash(otp, salt);
       await Otp.create({ mobileNumber:isAccountExists[0].mobileNumber, otp: hashedOtp });
         res.json({message:'otp send successfully',data:[{otp,..._.pick(isAccountExists[0],['mobileNumber' ,'_id'])}]})
-      })
-      .catch(error=>{
-          if(error.status===400)
-          {
-              return res.status(400).json({message:"this number is not verified please enter a verified number"})
-          }})
+      //       twilio.messages.create({
+      //     from:process.env.TWILIO_PHONE_NUMBER,
+      //     to:`+91${isAccountExists[0].mobileNumber}`,
+      //     body:
+      //     `${otp} is your instagram code.
+      //     Don't share it.`
+      // })
+      // .then(async()=>{
+      //   const salt = await bcrypt.genSalt(10);
+      //   const hashedOtp = await bcrypt.hash(otp, salt);
+      // await Otp.create({ mobileNumber:isAccountExists[0].mobileNumber, otp: hashedOtp });
+      //   res.json({message:'otp send successfully',data:[{otp,..._.pick(isAccountExists[0],['mobileNumber' ,'_id'])}]})
+      // })
+      // .catch(error=>{
+      //     if(error.status===400)
+      //     {
+      //         return res.status(400).json({message:"this number is not verified please enter a verified number"})
+      //     }})
     } catch (error) {
       next(error);
     }
