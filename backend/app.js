@@ -25,7 +25,7 @@ const corsOptions = {
 app.disable("x-powered-by");
 app.use(express.json());
 app.use(cors(corsOptions));
-app.get("/",(_req,res)=>res.send("welcome to backend"))
+app.get("/",(_req,res)=>res.send("welcome to instagram backend"))
 app.use("/account", account);
 app.all("*", auth);
 app.use("/post", post);
